@@ -1,0 +1,462 @@
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f5f5f5;
+  --success-color: #5cb85c;
+  --danger-color: #d9534f;
+  --warning-color: #f0ad4e;
+  --dark-color: #333;
+  --light-color: #f4f4f4;
+  --border-color: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3a7dca;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.error-message {
+  color: var(--danger-color);
+  background-color: #fde8e8;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #fadcdc;
+}
+
+/* Home page styles */
+.home-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.home-page header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-page header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.home-page footer {
+  margin-top: 60px;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Coupon Claim Component */
+.coupon-claim-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+.coupon-claim-container h2 {
+  margin-bottom: 20px;
+  color: var(--dark-color);
+}
+
+.claimed-coupon {
+  padding: 20px;
+  background-color: #e8f5e9;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.coupon-code {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--success-color);
+  margin: 15px 0;
+  padding: 10px;
+  border: 2px dashed var(--success-color);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.claim-button {
+  background-color: var(--success-color);
+  padding: 12px 30px;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.claim-button:hover {
+  background-color: #4cae4c;
+}
+
+.cooldown-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-header {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-header h1 {
+  font-size: 1.5rem;
+}
+
+.logout-button {
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-content {
+  display: flex;
+  flex: 1;
+}
+
+.admin-nav {
+  width: 220px;
+  background-color: var(--light-color);
+  padding: 20px 0;
+  border-right: 1px solid var(--border-color);
+}
+
+.admin-nav ul li {
+  margin-bottom: 5px;
+}
+
+.admin-nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--dark-color);
+  transition: background-color 0.3s;
+}
+
+.admin-nav ul li a:hover {
+  background-color: #e9e9e9;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.form-group.checkbox input {
+  margin-right: 10px;
+}
+
+.form-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.submit-button {
+  background-color: var(--success-color);
+}
+
+.cancel-button {
+  background-color: #6c757d;
+}
+
+/* Table Styles */
+.coupon-table, .claim-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.coupon-table th, .coupon-table td,
+.claim-table th, .claim-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.coupon-table th, .claim-table th {
+  background-color: var(--light-color);
+  font-weight: 600;
+}
+
+.coupon-table tr:hover, .claim-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+tr.inactive {
+  background-color: #fafafa;
+  color: #888;
+}
+
+td.actions {
+  display: flex;
+  gap: 5px;
+}
+
+.edit-button {
+  background-color: var(--primary-color);
+}
+
+.toggle-button {
+  background-color: var(--warning-color);
+}
+
+.delete-button {
+  background-color: var(--danger-color);
+}
+
+.active-badge, .inactive-badge,
+.used-badge, .unused-badge {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.active-badge {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.inactive-badge {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.used-badge {
+  background-color: #cfe2ff;
+  color: #084298;
+}
+
+.unused-badge {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+/* Dashboard Overview Styles */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.recent-claims {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.recent-claims h3 {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.recent-claims-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.claim-coupon {
+  font-weight: 500;
+}
+
+.claim-ip {
+  color: #666;
+}
+
+.claim-time {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Login Page Styles */
+.admin-login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.login-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .admin-content {
+    flex-direction: column;
+  }
+
+  .admin-nav {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .admin-nav ul {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .admin-nav ul li {
+    margin-bottom: 0;
+  }
+
+  .admin-nav ul li a {
+    padding: 8px 12px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coupon-table, .claim-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  td.actions {
+    flex-direction: column;
+  }
+
+  td.actions button {
+    width: 100%;
+  }
+}
