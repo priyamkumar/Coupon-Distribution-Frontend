@@ -42,7 +42,7 @@ function CouponClaim() {
       if (response.data.success) {
         setClaimedCoupon(response.data.coupon);
         setCoupon(null);
-        loadNextCoupon(); // Load the next coupon after claiming
+        loadNextCoupon();
       }
     } catch (err) {
       if (err.response?.status === 429) {
