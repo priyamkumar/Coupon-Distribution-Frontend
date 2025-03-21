@@ -66,7 +66,6 @@ button:disabled {
   border: 1px solid #fadcdc;
 }
 
-/* Home page styles */
 .home-page {
   max-width: 800px;
   margin: 0 auto;
@@ -91,7 +90,6 @@ button:disabled {
   font-size: 0.9rem;
 }
 
-/* Coupon Claim Component */
 .coupon-claim-container {
   background-color: white;
   border-radius: 8px;
@@ -142,7 +140,6 @@ button:disabled {
   margin: 20px 0;
 }
 
-/* Admin Dashboard Styles */
 .admin-dashboard {
   min-height: 100vh;
   display: flex;
@@ -203,7 +200,6 @@ button:disabled {
   padding: 20px;
 }
 
-/* Form Styles */
 .form-group {
   margin-bottom: 15px;
 }
@@ -247,7 +243,6 @@ button:disabled {
   background-color: #6c757d;
 }
 
-/* Table Styles */
 .coupon-table, .claim-table {
   width: 100%;
   border-collapse: collapse;
@@ -320,7 +315,6 @@ td.actions {
   color: #0f5132;
 }
 
-/* Dashboard Overview Styles */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -381,7 +375,6 @@ td.actions {
   font-size: 0.9rem;
 }
 
-/* Login Page Styles */
 .admin-login-page {
   display: flex;
   justify-content: center;
@@ -411,7 +404,6 @@ td.actions {
   margin-top: 10px;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .admin-content {
     flex-direction: column;

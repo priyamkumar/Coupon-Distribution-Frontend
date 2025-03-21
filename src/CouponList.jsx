@@ -53,14 +53,12 @@ const CouponList = () => {
   const handleFormSubmit = async (couponData) => {
     try {
       if (selectedCoupon) {
-        // Update existing coupon
         await axios.put(`https://coupon-distribution-eta.vercel.app/api/coupons/${selectedCoupon._id}`, couponData, {
           headers: {
             Authorization: `Bearer ${token}`
           }
         });
       } else {
-        // Add new coupon
         await axios.post('https://coupon-distribution-eta.vercel.app/api/coupons', couponData, {
           headers: {
             Authorization: `Bearer ${token}`
@@ -68,7 +66,6 @@ const CouponList = () => {
         });
       }
       
-      // Refresh the coupon list
       fetchCoupons();
       handleFormClose();
     } catch (err) {
