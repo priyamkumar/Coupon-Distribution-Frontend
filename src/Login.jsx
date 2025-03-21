@@ -41,6 +41,7 @@ function Login() {
 
   return (
     <div className="login-container">
+      <div className="login-form-container">
       <h2>Admin Login</h2>
 
       {error && <div className="error-message">{error}</div>}
@@ -72,6 +73,7 @@ function Login() {
           {loading ? "Logging in..." : "Login"}
         </button>
       </form>
+      </div>
     </div>
   );
 }

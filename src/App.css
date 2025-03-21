@@ -384,6 +384,13 @@ td.actions {
 }
 
 .login-container {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-container {
   background-color: white;
   padding: 30px;
   border-radius: 8px;
@@ -392,7 +399,7 @@ td.actions {
   max-width: 400px;
 }
 
-.login-container h2 {
+.login-form-container h2 {
   text-align: center;
   margin-bottom: 20px;
 }
