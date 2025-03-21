@@ -18,7 +18,7 @@ const CouponList = () => {
   const fetchCoupons = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('/api/coupons', {
+      const response = await axios.get('https://coupon-distribution-eta.vercel.app/api/coupons', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -54,14 +54,14 @@ const CouponList = () => {
     try {
       if (selectedCoupon) {
         // Update existing coupon
-        await axios.put(`/api/coupons/${selectedCoupon._id}`, couponData, {
+        await axios.put(`https://coupon-distribution-eta.vercel.app/api/coupons/${selectedCoupon._id}`, couponData, {
           headers: {
             Authorization: `Bearer ${token}`
           }
         });
       } else {
         // Add new coupon
-        await axios.post('/api/coupons', couponData, {
+        await axios.post('https://coupon-distribution-eta.vercel.app/api/coupons', couponData, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -79,7 +79,7 @@ const CouponList = () => {
 
   const toggleCouponStatus = async (coupon) => {
     try {
-      await axios.put(`/api/coupons/${coupon._id}`, 
+      await axios.put(`https://coupon-distribution-eta.vercel.app/api/coupons/${coupon._id}`, 
         { isActive: !coupon.isActive }, 
         {
           headers: {
@@ -97,7 +97,7 @@ const CouponList = () => {
   const deleteCoupon = async (couponId) => {
     if (window.confirm('Are you sure you want to delete this coupon?')) {
       try {
-        await axios.delete(`/api/coupons/${couponId}`, {
+        await axios.delete(`https://coupon-distribution-eta.vercel.app/api/coupons/${couponId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }

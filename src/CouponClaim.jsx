@@ -7,7 +7,7 @@ function CouponClaim () {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [cooldown, setCooldown] = useState(false);
-
+console.log(cooldown)
   useEffect(() => {
     const lastClaimTime = localStorage.getItem('lastClaimTime');
     if (lastClaimTime) {
@@ -15,7 +15,6 @@ function CouponClaim () {
       const timeElapsed = Date.now() - parseInt(lastClaimTime);
       
       if (timeElapsed < cooldownPeriod) {
-        setCooldown(true);
         const timeLeft = cooldownPeriod - timeElapsed;
         setTimeout(() => {
           setCooldown(false);

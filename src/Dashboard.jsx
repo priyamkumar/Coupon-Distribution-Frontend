@@ -23,10 +23,10 @@ const Dashboard = () => {
               <Link to="/admin/dashboard">Overview</Link>
             </li>
             <li>
-              <Link to="/admin/coupons">Coupon Management</Link>
+              <Link to="/admin/dashboard/coupons">Coupon Management</Link>
             </li>
             <li>
-              <Link to="/admin/claims">Claim History</Link>
+              <Link to="/admin/dashboard/claims">Claim History</Link>
             </li>
           </ul>
         </nav>
